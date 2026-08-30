@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "embassy-house.org",
+    baseUrl: "embassy.community",
     ignorePatterns: [
       // Quartz infrastructure
       ".quartz/**",
