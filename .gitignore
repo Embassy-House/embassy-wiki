@@ -1,0 +1,45 @@
+# Quartz Build Artifacts
+.quartz-cache/
+public/
+tsconfig.tsbuildinfo
+
+# Node.js
+node_modules/
+/package-lock.json
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE & Editor Files
+.vscode/
+.idea/
+.cursor/
+.cursorrules
+.cursorignore
+.mdc
+.obsidian/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & Secrets
+.env
+
+# Private & Local Content
+private/
+
+# Python Environment
+.venv/
+
+# Workspace & Development
+.specstory/
+prof/
+
+# Deployment & Hosting
+.replit
+replit.nix
+build.sh
