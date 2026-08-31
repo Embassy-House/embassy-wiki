@@ -1,7 +1,7 @@
 {
-  "name": "website",
+  "name": "embassy-wiki",
   "version": "1.0.0",
-  "description": "Embassy House website (Quartz)",
+  "description": "Embassy House wiki (Quartz)",
   "type": "module",
   "engines": {
     "node": ">=22",
@@ -9,6 +9,9 @@
   },
   "scripts": {
     "build": "cd .quartz && npm run build",
+    "build:website": "QUARTZ_BASE_URL=embassy.community npm run build",
+    "sync:website": "node scripts/sync-website.mjs",
+    "build:website:sync": "npm run build:website && npm run sync:website",
     "serve": "cd .quartz && npm run serve",
     "quartz": "cd .quartz && tsx ./quartz/bootstrap-cli.mjs"
   }
