@@ -51,6 +51,7 @@ const EmbassyHome: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
     (fm.hero_subtitle as string | undefined) ??
     (fm.kicker as string | undefined) ??
     "commune | experimental space | home"
+  const bannerSrc = joinSegments(pathToRoot(slug), "static/embassy-banner.png")
 
   return (
     <article class="embassy-home">
@@ -64,6 +65,14 @@ const EmbassyHome: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
 
       <main class="embassy-home__main">
         <section class="embassy-home__hero">
+          <img
+            class="embassy-home__hero-banner"
+            src={bannerSrc}
+            alt=""
+            aria-hidden="true"
+            width={1200}
+            height={400}
+          />
           <div class="embassy-home__hero-copy">
             <p class="embassy-home__hero-pretitle">{heroPretitle}</p>
             <h1 class="embassy-home__hero-title">{heroTitle}</h1>

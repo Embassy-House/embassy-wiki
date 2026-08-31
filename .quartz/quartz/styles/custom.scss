@@ -249,29 +249,13 @@ body[data-slug="index"] {
   flex-direction: unset !important;
   background: var(--embassy-banner-sky);
   border-bottom: none;
-  overflow: hidden;
-  min-height: clamp(96px, 16vw, 148px);
-
-  &__banner {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: auto;
-    max-width: min(62%, 760px);
-    object-fit: cover;
-    object-position: left center;
-    pointer-events: none;
-    user-select: none;
-  }
 
   &__inner {
     position: relative;
     z-index: 1;
     max-width: var(--embassy-max);
     margin: 0 auto;
-    min-height: clamp(96px, 16vw, 148px);
-    padding: 18px clamp(20px, 5vw, 40px);
+    padding: 14px clamp(20px, 5vw, 40px);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -537,15 +521,34 @@ body[data-slug="index"] {
     position: relative;
     display: grid;
     align-items: center;
-    min-height: clamp(160px, 24vw, 260px);
+    min-height: clamp(220px, 42vw, 400px);
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(
-      180deg,
-      var(--embassy-banner-sky) 0%,
-      var(--embassy-banner-sky) 72%,
-      var(--embassy-night) 100%
-    );
+    background: var(--embassy-banner-sky);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        transparent 62%,
+        var(--embassy-night) 100%
+      );
+    }
+  }
+
+  &__hero-banner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    pointer-events: none;
+    user-select: none;
   }
 
   &__hero-copy {
